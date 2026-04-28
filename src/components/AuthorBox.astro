@@ -1,0 +1,122 @@
+---
+const author = {
+  name: 'かけかぶ',
+  role: '個人投資家・ブログ運営者',
+  bio: '日本株・米国ETF・新NISAを活用した配当投資と家計改善を実践中。総資産550万円から月20万円の配当金生活を目指して、リアルな運用記録を発信しています。',
+  initial: 'か',
+};
+---
+
+<aside class="author-box" aria-label="著者情報">
+  <div class="author-avatar">
+    <span class="author-initial">{author.initial}</span>
+  </div>
+  <div class="author-info">
+    <div class="author-name-row">
+      <span class="author-label">この記事を書いた人</span>
+    </div>
+    <h3 class="author-name">{author.name}</h3>
+    <p class="author-role">{author.role}</p>
+    <p class="author-bio">{author.bio}</p>
+    <a href="/about" class="author-link">プロフィールを詳しく見る →</a>
+  </div>
+</aside>
+
+<style>
+  .author-box {
+    display: flex;
+    gap: 1.25em;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5em;
+    margin: 3em 0 1em;
+  }
+
+  .author-avatar {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1A56DB 0%, #2563EB 60%, #3B82F6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(26, 86, 219, 0.25);
+  }
+
+  .author-initial {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    letter-spacing: -0.02em;
+  }
+
+  .author-info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .author-name-row {
+    margin-bottom: 0.3em;
+  }
+
+  .author-label {
+    display: inline-block;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--accent);
+    background: #EBF2FF;
+    border-radius: 4px;
+    padding: 0.2em 0.6em;
+    letter-spacing: 0.04em;
+  }
+
+  .author-name {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: 0 0 0.15em;
+    color: var(--text);
+  }
+
+  .author-role {
+    font-size: 0.8em;
+    color: var(--text-muted);
+    margin: 0 0 0.6em;
+  }
+
+  .author-bio {
+    font-size: 0.875em;
+    line-height: 1.7;
+    color: var(--text);
+    margin: 0 0 0.8em;
+  }
+
+  .author-link {
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .author-link:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 600px) {
+    .author-box {
+      flex-direction: column;
+      gap: 0.75em;
+      padding: 1.25em;
+    }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+    }
+    .author-initial {
+      font-size: 1.4em;
+    }
+  }
+</style>
