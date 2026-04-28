@@ -1,7 +1,7 @@
 ---
 title: '米国高配当ETF 4本徹底比較｜VYM・SCHD・SPYD・HDV、私のメインはどれか'
 description: '実際にVYM・SCHD・SPYD・HDVをすべて保有している私が、4つの米国高配当ETFを徹底比較。メインに据えているSCHDを選んだ理由と、オルカンとの役割の違いも公開します。'
-pubDate: '2026-04-30'
+pubDate: '2026-04-27'
 ---
 
 ## 米国高配当ETF、選択肢が多すぎ問題
