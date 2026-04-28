@@ -13,7 +13,8 @@ pubDate: '2026-04-27'
 私もそのひとりです。ただ、夢で終わらせないために、**現在地と目標を数字で公開**して、10年後にどこまで近づけるかをこのブログで記録していくことにしました。
 
 派手な成功談ではなく、**普通の会社員が地道に積み上げる過程**を発信していきます。同じように配当金生活を目指す方の参考になれば嬉しいです。
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/4cbdd020-500d-4ba7-a1c7-aee196e78be9" />
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/1a57ab39-aa85-48ed-b44e-7ea0bb5c69f5" />
+
 
 ## 現在地：資産500万円・年間配当10万円
 
