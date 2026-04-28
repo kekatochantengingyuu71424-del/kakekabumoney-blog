@@ -15,7 +15,13 @@ type Props = CollectionEntry<'blog'>['data'] & {
   slug?: string;
 };
 
-const { title, description, pubDate, updatedDate, headings = [], slug } = Astro.props;
+const { title, description, pubDate, updatedDate, headings = [], slug, category } = Astro.props;
+
+const CATEGORY_LABELS: Record<string, string> = {
+  'japan-stock': '日本株',
+  'us-stock': '米国株',
+  'household': '家計',
+};
 
 const shareUrl = slug
   ? new URL(`/blog/${slug}/`, Astro.site ?? Astro.url).toString()
@@ -33,6 +39,11 @@ const shareUrl = slug
       <article>
         <header class="article-header">
           <div class="article-meta">
+            {category && (
+              <a href={`/blog/category/${category}/`} class="article-category">
+                {CATEGORY_LABELS[category]}
+              </a>
+            )}
             <time class="article-date">
               <FormattedDate date={pubDate} />
             </time>
@@ -79,6 +90,22 @@ const shareUrl = slug
     align-items: center;
     gap: 1em;
     margin-bottom: 0.75em;
+  }
+
+  .article-category {
+    display: inline-block;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: var(--accent);
+    background: #EBF2FF;
+    border-radius: 4px;
+    padding: 0.2em 0.7em;
+    text-decoration: none;
+  }
+
+  .article-category:hover {
+    background: #DBEAFE;
+    text-decoration: none;
   }
 
   .article-date {
