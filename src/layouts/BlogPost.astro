@@ -8,6 +8,7 @@ import Header from '../components/Header.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import AuthorBox from '../components/AuthorBox.astro';
 import ShareButtons from '../components/ShareButtons.astro';
+import RelatedPosts from '../components/RelatedPosts.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & {
   headings?: MarkdownHeading[];
@@ -53,6 +54,8 @@ const shareUrl = slug
         </div>
 
         <ShareButtons title={title} url={shareUrl} />
+
+        {slug && <RelatedPosts currentSlug={slug} />}
 
         <AuthorBox />
 
