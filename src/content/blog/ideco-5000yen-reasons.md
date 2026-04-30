@@ -15,7 +15,7 @@ iDeCoについて調べると、よくこんな意見を目にする。
 
 この記事では、**月5,000円のiDeCoでも続けている3つの理由**を、10年続けた立場から正直に書く。
 
-![ChatGPT Image 2026年4月30日 17_33_20.png](blob:https:/app.pagescms.org/718d1dc1-fa96-42f7-944a-494350925bee)
+![ChatGPT Image 2026年4月30日 17_33_20.png](</images/ChatGPT Image 2026年4月30日 17_33_20.png>)
 
 ## まず、iDeCoの基本をおさらい
 
