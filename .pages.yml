@@ -1,0 +1,42 @@
+media:
+  input: public/images
+  output: /images
+
+content:
+  - name: blog
+    label: ブログ記事
+    type: collection
+    path: src/content/blog
+    view:
+      fields: [title, pubDate, category]
+      sort: [pubDate, title]
+      default:
+        sort: pubDate
+        order: desc
+    filename: '{fields.title}.md'
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明文（メタディスクリプション）
+        type: text
+        required: true
+      - name: pubDate
+        label: 公開日
+        type: date
+        required: true
+        options:
+          format: 'yyyy-MM-dd'
+      - name: category
+        label: カテゴリ
+        type: select
+        options:
+          values:
+            - { value: 'japan-stock', label: '日本株' }
+            - { value: 'us-stock', label: '米国株' }
+            - { value: 'household', label: '家計' }
+      - name: body
+        label: 本文
+        type: rich-text
