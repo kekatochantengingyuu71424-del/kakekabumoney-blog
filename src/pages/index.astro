@@ -6,6 +6,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'japan-stock': '日本株',
+  'us-stock': '米国株',
+  'household': '家計',
+};
+
 const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, 5);
@@ -21,52 +27,65 @@ const posts = (await getCollection('blog'))
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="hero-badge">お金の情報ブログ</div>
-        <h1 class="hero-title">日本株と家計管理で<br />お金の自由を目指す</h1>
+        <div class="hero-badge">
+          <span class="hero-badge-dot"></span>
+          お金の情報ブログ
+        </div>
+        <h1 class="hero-title">
+          配当投資と家計改善で、<br />
+          <span class="hero-title-accent">お金の自由</span>を目指す
+        </h1>
         <p class="hero-desc">
-          投資初心者から中級者向けに、日本株の分析・配当投資・家計改善の情報を<br class="pc-only" />
-          わかりやすくお届けします。
+          総資産550万円から月20万円の配当金生活へ。<br class="pc-only" />
+          普通の会社員のリアルな投資・家計の記録を発信中。
         </p>
         <div class="hero-tags">
-          <span class="tag tag-blue">📈 日本株</span>
-          <span class="tag tag-green">💰 配当投資</span>
-          <span class="tag tag-orange">🏠 家計管理</span>
+          <a href="/blog/category/japan-stock/" class="tag tag-blue">📈 日本株</a>
+          <a href="/blog/category/us-stock/" class="tag tag-green">🌎 米国株</a>
+          <a href="/blog/category/household/" class="tag tag-orange">🏠 家計</a>
         </div>
       </section>
 
       <!-- 最新記事 -->
       <section class="section">
-        <h2 class="section-title">最新記事</h2>
+        <div class="section-header">
+          <h2 class="section-title">最新記事</h2>
+          <a href="/blog" class="section-more">すべて見る →</a>
+        </div>
         <ul class="post-list">
           {posts.map((post) => (
             <li class="post-card">
               <a href={`/blog/${post.id}/`} class="post-link">
-                <div class="post-info">
-                  <h3 class="post-title">{post.data.title}</h3>
-                  {post.data.description && (
-                    <p class="post-desc">{post.data.description}</p>
+                <div class="post-meta">
+                  {post.data.category && (
+                    <span class="post-category">{CATEGORY_LABELS[post.data.category]}</span>
                   )}
                   <time class="post-date">
                     <FormattedDate date={post.data.pubDate} />
                   </time>
                 </div>
+                <h3 class="post-title">{post.data.title}</h3>
+                {post.data.description && (
+                  <p class="post-desc">{post.data.description}</p>
+                )}
               </a>
             </li>
           ))}
         </ul>
-        <div class="more-link-wrap">
-          <a href="/blog" class="more-link">記事一覧をもっと見る →</a>
-        </div>
       </section>
 
       <!-- このブログについて -->
       <section class="about-card">
-        <h2>このブログについて</h2>
-        <p>
-          「かけかぶマネーブログ」は、<strong>日本株への投資</strong>と<strong>家計の最適化</strong>をテーマにしたブログです。
-          投資歴を重ねながら、実際に試した銘柄選びの方法や、毎月の家計見直しで貯蓄を増やすコツをシェアしています。
-        </p>
-        <a href="/about" class="btn">詳しく読む</a>
+        <div class="about-card-icon">か</div>
+        <div class="about-card-body">
+          <h2>このブログについて</h2>
+          <p>
+            「かけかぶマネーブログ」は、<strong>日本株・米国ETF・新NISA</strong>を活用した配当投資と、
+            <strong>家計改善</strong>をテーマにしたブログです。普通の会社員が実際に試した投資戦略や、
+            月々の家計見直しのリアルを発信しています。
+          </p>
+          <a href="/about" class="btn">詳しく読む →</a>
+        </div>
       </section>
     </main>
     <Footer />
@@ -77,32 +96,53 @@ const posts = (await getCollection('blog'))
   /* Hero */
   .hero {
     text-align: center;
-    padding: 3em 0 2.5em;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 2.5em;
+    padding: 3.5em 1em 3em;
+    margin-bottom: 3em;
+    background: radial-gradient(ellipse at top, var(--accent-bg) 0%, transparent 70%);
+    border-radius: var(--radius-lg);
+    position: relative;
   }
   .hero-badge {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
     font-size: 0.75em;
     font-weight: 700;
     color: var(--accent);
-    background: #EBF2FF;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
     border-radius: 99px;
-    padding: 0.3em 0.9em;
-    margin-bottom: 1em;
+    padding: 0.4em 1em;
+    margin-bottom: 1.5em;
     letter-spacing: 0.04em;
+    box-shadow: var(--shadow-xs);
+  }
+  .hero-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
   }
   .hero-title {
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 1.35;
-    margin: 0 0 0.6em;
+    margin: 0 0 0.7em;
     color: var(--text);
+    font-weight: 900;
+    letter-spacing: -0.025em;
+  }
+  .hero-title-accent {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .hero-desc {
     font-size: 0.95em;
     color: var(--text-muted);
-    margin: 0 0 1.5em;
-    line-height: 1.8;
+    margin: 0 0 1.75em;
+    line-height: 1.85;
   }
   .hero-tags {
     display: flex;
@@ -113,25 +153,46 @@ const posts = (await getCollection('blog'))
   .tag {
     display: inline-block;
     font-size: 0.8em;
-    font-weight: 500;
-    padding: 0.3em 0.8em;
+    font-weight: 600;
+    padding: 0.4em 1em;
     border-radius: 99px;
+    text-decoration: none;
+    transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
   }
-  .tag-blue  { background: #EBF2FF; color: #1A56DB; }
-  .tag-green { background: #ECFDF5; color: #059669; }
-  .tag-orange{ background: #FFF7ED; color: #C2410C; }
+  .tag:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+  }
+  .tag-blue   { background: #EFF6FF; color: #1E40AF; }
+  .tag-green  { background: #ECFDF5; color: #059669; }
+  .tag-orange { background: #FFF7ED; color: #C2410C; }
 
   /* Section */
-  .section { margin-bottom: 3em; }
-  .section-title {
-    font-size: 1.05em;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: 0.04em;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
+  .section { margin-bottom: 3.5em; }
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.25em;
+    padding-bottom: 0.75em;
     border-bottom: 2px solid var(--border);
   }
+  .section-title {
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .section-more {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .section-more:hover { color: var(--accent); }
 
   /* Post list */
   .post-list {
@@ -145,84 +206,122 @@ const posts = (await getCollection('blog'))
   .post-card {
     border-bottom: 1px solid var(--border-light);
   }
+  .post-card:last-child { border-bottom: none; }
   .post-link {
     display: block;
-    padding: 1.2em 0;
+    padding: 1.4em 0.5em;
     text-decoration: none;
     color: inherit;
-    transition: opacity 0.15s;
+    border-radius: var(--radius-sm);
+    transition: background 0.15s var(--ease);
   }
   .post-link:hover {
-    opacity: 0.75;
+    background: var(--bg-soft);
     text-decoration: none;
   }
-  .post-title {
-    font-size: 1.05em;
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75em;
+    margin-bottom: 0.5em;
+  }
+  .post-category {
+    display: inline-block;
+    font-size: 0.7em;
     font-weight: 700;
-    margin: 0 0 0.3em;
+    color: var(--accent);
+    background: var(--accent-bg);
+    border-radius: 4px;
+    padding: 0.2em 0.65em;
+    letter-spacing: 0.04em;
+  }
+  .post-date {
+    font-size: 0.78em;
+    color: var(--text-light);
+    font-weight: 500;
+  }
+  .post-title {
+    font-size: 1.08em;
+    font-weight: 700;
+    margin: 0 0 0.35em;
     color: var(--text);
     line-height: 1.5;
+    letter-spacing: -0.01em;
   }
   .post-desc {
     font-size: 0.875em;
     color: var(--text-muted);
-    margin: 0 0 0.4em;
+    margin: 0;
+    line-height: 1.6;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .post-date {
-    font-size: 0.8em;
-    color: var(--text-light);
-  }
-
-  /* More link */
-  .more-link-wrap { margin-top: 1.25em; text-align: right; }
-  .more-link {
-    font-size: 0.875em;
-    font-weight: 600;
-    color: var(--accent);
-    text-decoration: none;
-  }
-  .more-link:hover { text-decoration: underline; }
 
   /* About card */
   .about-card {
-    background: #fff;
+    display: flex;
+    gap: 1.5em;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-soft) 100%);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1.75em 2em;
+    border-radius: var(--radius-lg);
+    padding: 2em 2.25em;
     margin-bottom: 2em;
+    box-shadow: var(--shadow-xs);
   }
+  .about-card-icon {
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.4em;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+  }
+  .about-card-body { flex: 1; min-width: 0; }
   .about-card h2 {
-    font-size: 1.1em;
-    margin-bottom: 0.75em;
+    font-size: 1.05em;
+    margin: 0 0 0.6em;
+    color: var(--text);
   }
   .about-card p {
-    font-size: 0.9em;
+    font-size: 0.875em;
     color: var(--text-muted);
-    margin-bottom: 1em;
-    line-height: 1.8;
+    margin-bottom: 1.1em;
+    line-height: 1.85;
   }
   .btn {
     display: inline-block;
-    padding: 0.5em 1.25em;
+    padding: 0.55em 1.4em;
     background: var(--accent);
     color: #fff;
-    border-radius: 6px;
-    font-size: 0.875em;
-    font-weight: 600;
+    border-radius: 8px;
+    font-size: 0.85em;
+    font-weight: 700;
     text-decoration: none;
-    transition: background 0.15s;
+    transition: background 0.15s var(--ease), transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+    box-shadow: 0 2px 6px rgba(30, 64, 175, 0.2);
   }
-  .btn:hover { background: var(--accent-hover); text-decoration: none; }
+  .btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+    text-decoration: none;
+  }
 
   .pc-only { display: none; }
   @media (min-width: 640px) { .pc-only { display: inline; } }
 
   @media (max-width: 600px) {
-    .hero-title { font-size: 1.5em; }
-    .about-card { padding: 1.25em 1.25em; }
+    .hero { padding: 2.5em 1em 2em; }
+    .hero-title { font-size: 1.55em; }
+    .about-card { flex-direction: column; padding: 1.5em 1.5em; gap: 1em; }
+    .about-card-icon { width: 48px; height: 48px; font-size: 1.2em; }
   }
 </style>

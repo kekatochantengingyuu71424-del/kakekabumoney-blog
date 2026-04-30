@@ -1,20 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;900&family=Inter:wght@500;600;700&display=swap');
 
 :root {
-  --accent: #1A56DB;
-  --accent-hover: #1643AE;
+  /* Colors - Navy × Blue palette */
+  --accent: #1E40AF;
+  --accent-hover: #1E3A8A;
+  --accent-light: #3B82F6;
+  --accent-bg: #EFF6FF;
   --green: #059669;
-  --text: #111827;
-  --text-muted: #6B7280;
-  --text-light: #9CA3AF;
-  --bg: #FAFAFA;
+
+  /* Text */
+  --text: #0F172A;
+  --text-muted: #475569;
+  --text-light: #94A3B8;
+
+  /* Backgrounds */
+  --bg: #FBFBFD;
   --bg-card: #FFFFFF;
-  --border: #E5E7EB;
-  --border-light: #F3F4F6;
-  --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-hover: 0 4px 12px rgba(0,0,0,0.10);
-  --radius: 8px;
-  --max-width: 680px;
+  --bg-soft: #F8FAFC;
+
+  /* Borders */
+  --border: #E2E8F0;
+  --border-light: #F1F5F9;
+
+  /* Shadows - softer & more refined */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.06), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.08), 0 4px 8px rgba(15, 23, 42, 0.04);
+
+  /* Layout */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --max-width: 720px;
+  --max-width-wide: 1080px;
+
+  /* Transitions */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -30,15 +52,21 @@ body {
   font-size: 17px;
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   word-break: break-word;
   overflow-wrap: break-word;
+  letter-spacing: 0.01em;
 }
 
 main {
   width: var(--max-width);
   max-width: calc(100% - 2em);
   margin: 0 auto;
-  padding: 2.5em 0 4em;
+  padding: 3em 0 5em;
+}
+
+main.wide {
+  width: var(--max-width-wide);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,19 +74,22 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
   line-height: 1.4;
   font-weight: 700;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
-h1 { font-size: 2em; }
+h1 { font-size: 2.1em; font-weight: 900; letter-spacing: -0.02em; }
 h2 { font-size: 1.5em; }
-h3 { font-size: 1.25em; }
-h4 { font-size: 1.1em; }
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.05em; }
 
 a {
   color: var(--accent);
   text-decoration: none;
+  transition: color 0.15s var(--ease);
 }
 a:hover {
+  color: var(--accent-light);
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 p {
@@ -79,61 +110,87 @@ code {
   font-family: 'SFMono-Regular', Consolas, monospace;
   font-size: 0.875em;
   padding: 2px 6px;
-  background: var(--border-light);
+  background: var(--accent-bg);
   border-radius: 4px;
-  color: #D63384;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 pre {
   padding: 1.25em 1.5em;
   border-radius: var(--radius);
-  background: #1e2433;
+  background: #0F172A;
   overflow-x: auto;
+  box-shadow: var(--shadow-md);
 }
 
 pre > code {
   all: unset;
-  color: #e2e8f0;
+  color: #E2E8F0;
   font-size: 0.875em;
 }
 
 blockquote {
   border-left: 3px solid var(--accent);
+  background: var(--accent-bg);
   margin: 1.5em 0;
-  padding: 0.5em 0 0.5em 1.25em;
-  color: var(--text-muted);
+  padding: 1em 1.25em;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text);
   font-style: normal;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 hr {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 2em 0;
+  margin: 2.5em 0;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95em;
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  margin: 1.5em 0;
 }
 th, td {
-  padding: 0.65em 1em;
-  border: 1px solid var(--border);
+  padding: 0.85em 1.1em;
+  border-bottom: 1px solid var(--border);
   text-align: left;
 }
+tr:last-child td {
+  border-bottom: none;
+}
 th {
-  background: var(--border-light);
+  background: var(--bg-soft);
   font-weight: 700;
+  color: var(--text);
+  font-size: 0.9em;
+  letter-spacing: 0.02em;
 }
 
 strong, b {
   font-weight: 700;
+  color: var(--text);
+}
+
+::selection {
+  background: var(--accent-bg);
+  color: var(--accent);
 }
 
 @media (max-width: 720px) {
   body { font-size: 16px; }
-  main { padding: 1.5em 0 3em; }
-  h1 { font-size: 1.6em; }
+  main { padding: 1.75em 0 3em; }
+  h1 { font-size: 1.65em; }
+  h2 { font-size: 1.3em; }
 }
 
 .sr-only {
