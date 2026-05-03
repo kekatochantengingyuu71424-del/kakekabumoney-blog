@@ -5,8 +5,6 @@ pubDate: '2026-04-28'
 category: 'household'
 ---
 
-import AffiliateCTA from '../../components/AffiliateCTA.astro';
-
 ## ふるさと納税、まだやってない人は本気でもったいない
 
 家計改善を考えるうえで、**ふるさと納税は「やらないと損」レベルの制度**です。
@@ -179,18 +177,18 @@ import AffiliateCTA from '../../components/AffiliateCTA.astro';
 
 ## ふるさと納税サイト
 
-<AffiliateCTA
-  href="https://event.rakuten.co.jp/furusato/"
-  title="楽天ふるさと納税でお得に寄付する"
-  description="ポイント還元で実質負担がさらに減る。楽天経済圏ユーザーは必須。"
-  icon="🎁"
-  label="楽天ふるさと納税を見る →"
-/>
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天ふるさと納税でお得に寄付する</p>
+    <p class="affiliate-cta-desc">ポイント還元で実質負担がさらに減る。楽天経済圏ユーザーは必須。</p>
+  </div>
+  <a href="https://event.rakuten.co.jp/furusato/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天ふるさと納税を見る →</a>
+</div>
 
-<AffiliateCTA
-  href="https://www.satofull.jp/"
-  title="さとふるでシンプルにふるさと納税"
-  description="UIがわかりやすく初心者にも使いやすい。PayPay還元もお得。"
-  icon="🏡"
-  label="さとふるを見る →"
-/>
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">さとふるでシンプルにふるさと納税</p>
+    <p class="affiliate-cta-desc">UIがわかりやすく初心者にも使いやすい。PayPay還元もお得。</p>
+  </div>
+  <a href="https://www.satofull.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">さとふるを見る →</a>
+</div>

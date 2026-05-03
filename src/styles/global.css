@@ -193,6 +193,68 @@ strong, b {
   h2 { font-size: 1.3em; }
 }
 
+.affiliate-cta {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background: linear-gradient(135deg, #EBF2FF 0%, #F0F7FF 100%);
+  border: 1px solid #BFDBFE;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25em 1.5em;
+  margin: 2em 0;
+}
+
+.affiliate-cta-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.affiliate-cta-title {
+  font-size: 0.95em;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.2em;
+  line-height: 1.5;
+}
+
+.affiliate-cta-desc {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.affiliate-cta-btn {
+  flex-shrink: 0;
+  display: inline-block;
+  background: var(--accent);
+  color: #fff !important;
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.affiliate-cta-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .affiliate-cta {
+    flex-wrap: wrap;
+    gap: 0.75em;
+  }
+  .affiliate-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
 .app-badges {
   display: flex;
   flex-wrap: wrap;
