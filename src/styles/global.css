@@ -193,6 +193,20 @@ strong, b {
   h2 { font-size: 1.3em; }
 }
 
+.app-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  align-items: center;
+  margin: 1em 0;
+}
+.app-badges img {
+  height: 50px;
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
