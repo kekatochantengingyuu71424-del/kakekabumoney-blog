@@ -11,13 +11,13 @@ const {
   href,
   title,
   description,
-  icon = '🔗',
+  icon,
   label = '詳しくはこちら →',
 } = Astro.props;
 ---
 
 <div class="affiliate-cta">
-  <span class="affiliate-cta-icon">{icon}</span>
+  {icon && <span class="affiliate-cta-icon">{icon}</span>}
   <div class="affiliate-cta-body">
     <p class="affiliate-cta-title">{title}</p>
     {description && <p class="affiliate-cta-desc">{description}</p>}
