@@ -1,10 +1,9 @@
 ---
-title: 'JEPI vs JEPQ｜高利回りに踊らされた私が保有して気づいた本当の姿'
-description: '配当利回り8〜10%超で人気の米国カバードコールETF、JEPIとJEPQ。利回りに釣られて購入した私が、両方を保有しながら気づいた「多く持つべきではない理由」を正直に書きます。'
-pubDate: '2026-05-06'
-category: 'us-stock'
+title: JEPI vs JEPQ｜高利回りに踊らされた私が保有して気づいた本当の姿
+description: 配当利回り8〜10%超で人気の米国カバードコールETF、JEPIとJEPQ。利回りに釣られて購入した私が、両方を保有しながら気づいた「多く持つべきではない理由」を正直に書きます。
+pubDate: 2026-05-09
+category: us-stock
 ---
-
 ## JEPIとJEPQ、利回りに釣られて買った話
 
 正直に告白します。
@@ -23,8 +22,9 @@ category: 'us-stock'
 
 まずは2つのETFの基本情報から。
 
+
 | 項目 | JEPI | JEPQ |
-|------|------|------|
+| --------- | ---------------------------------- | ----------------------------------------- |
 | 正式名称 | JPMorgan Equity Premium Income ETF | JPMorgan Nasdaq Equity Premium Income ETF |
 | 運用会社 | JPモルガン | JPモルガン |
 | 投資先 | 米国大型株（S&P500型） | ナスダック100型 |
@@ -33,6 +33,7 @@ category: 'us-stock'
 | 分配頻度 | 毎月 | 毎月 |
 | 設定年 | 2020年 | 2022年 |
 | 値動きの性格 | S&P500より穏やか | 大きめ・テック寄り |
+
 
 両方とも **「カバードコール戦略」** を使っているのが最大の特徴です。
 
@@ -148,10 +149,8 @@ JEPI/JEPQは「高利回りで毎月配当」という強烈な魅力があり�
 
 ## 楽天証券で米国ETFを買う
 
-<div class="affiliate-cta">
-  <div class="affiliate-cta-body">
-    <p class="affiliate-cta-title">楽天証券で米国ETFを買う</p>
-    <p class="affiliate-cta-desc">JEPI・JEPQ・SCHDなど主要な米国ETFを取り扱い。新NISA成長投資枠なら配当が非課税。</p>
-  </div>
-  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
-</div>
+楽天証券で米国ETFを買う
+
+JEPI・JEPQ・SCHDなど主要な米国ETFを取り扱い。新NISA成長投資枠なら配当が非課税。
+
+[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
