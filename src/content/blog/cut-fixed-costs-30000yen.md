@@ -254,10 +254,13 @@ category: household
 
 ## 楽天モバイルを試してみる
 
+<p class="pr-label">※本セクションには広告（PR）が含まれます</p>
+
 <div class="affiliate-cta">
   <div class="affiliate-cta-body">
     <p class="affiliate-cta-title">楽天モバイルで通信費を見直す</p>
     <p class="affiliate-cta-desc">国内通話無料・最大3,278円で使い放題。家族統一で月1万円以上の節約も可能。</p>
   </div>
-  <a href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天モバイルを見る →</a>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3LMR+DA33JM+5W58+5YZ75" target="_blank" rel="nofollow noopener noreferrer sponsored" class="affiliate-cta-btn">楽天モバイルを見る →</a>
 </div>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3LMR+DA33JM+5W58+5YZ75" alt="" />

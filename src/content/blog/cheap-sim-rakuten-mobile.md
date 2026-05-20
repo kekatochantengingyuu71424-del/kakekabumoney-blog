@@ -143,10 +143,13 @@ Rakuten Linkというアプリを使うと、**国内通話が無料**。
 
 ## 楽天モバイルに乗り換える
 
+<p class="pr-label">※本セクションには広告（PR）が含まれます</p>
+
 <div class="affiliate-cta">
   <div class="affiliate-cta-body">
     <p class="affiliate-cta-title">楽天モバイルで通信費を半額にする</p>
     <p class="affiliate-cta-desc">国内通話無料・上限3,278円のシンプル料金。楽天経済圏ユーザーなら相乗効果も大きい。</p>
   </div>
-  <a href="https://network.mobile.rakuten.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天モバイルを見る →</a>
+  <a href="https://px.a8.net/svt/ejp?a8mat=4B3LMR+DA33JM+5W58+5YZ75" target="_blank" rel="nofollow noopener noreferrer sponsored" class="affiliate-cta-btn">楽天モバイルを見る →</a>
 </div>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B3LMR+DA33JM+5W58+5YZ75" alt="" />

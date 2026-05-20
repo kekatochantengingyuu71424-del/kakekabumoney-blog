@@ -193,6 +193,14 @@ strong, b {
   h2 { font-size: 1.3em; }
 }
 
+.pr-label {
+  font-size: 0.75em;
+  color: var(--text-light);
+  margin: 0.5em 0 -0.5em;
+  text-align: right;
+  letter-spacing: 0.02em;
+}
+
 .affiliate-cta {
   display: flex;
   align-items: center;
