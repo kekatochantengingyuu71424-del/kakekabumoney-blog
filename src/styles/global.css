@@ -193,6 +193,23 @@ strong, b {
   h2 { font-size: 1.3em; }
 }
 
+.affiliate-banner {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+}
+.affiliate-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s var(--ease), box-shadow 0.15s var(--ease);
+}
+.affiliate-banner a:hover img {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 .pr-label {
   font-size: 0.75em;
   color: var(--text-light);
