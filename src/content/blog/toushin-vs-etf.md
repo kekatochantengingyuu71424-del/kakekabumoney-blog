@@ -151,8 +151,10 @@ ETFは「**配当を実感する**」役割。口座に振り込まれる現金�
 
 ## 楽天証券で投資信託・ETFを買う
 
-楽天証券で投資信託・ETFを始める
-
-投資信託は100円から、米国ETFも手数料無料で買付可能。楽天カード積立でポイントも貯まる。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で投資信託・ETFを始める</p>
+    <p class="affiliate-cta-desc">投資信託は100円から、米国ETFも手数料無料で買付可能。楽天カード積立でポイントも貯まる。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>
