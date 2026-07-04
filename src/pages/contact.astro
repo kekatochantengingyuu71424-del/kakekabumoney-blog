@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/BlogPost.astro';
+---
+
+<Layout
+  title="お問い合わせ"
+  description="かけかぶマネーブログへのお問い合わせはこちらのフォームからお願いいたします。"
+  pubDate={new Date('2026-07-05')}
+>
+  <p>
+    当ブログへのご意見・ご質問・お仕事のご依頼などは、以下のフォームからお気軽にお問い合わせください。
+    内容を確認のうえ、必要に応じてご返信いたします。
+  </p>
+
+  <div class="form-wrap">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSdxHjnGzJlAdJEaK4cdxf3MyV17Z4KQpsQ2BnJ4yNI5C56WgQ/viewform?embedded=true"
+      width="100%"
+      height="900"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      title="お問い合わせフォーム"
+    >読み込んでいます…</iframe>
+  </div>
+
+  <p>
+    ※ 返信が必要なお問い合わせには、ご記入いただいたメールアドレス宛にご連絡いたします。
+    数日経っても返信がない場合は、お手数ですが再度お問い合わせください。
+  </p>
+</Layout>
+
+<style>
+  .form-wrap {
+    margin: 1.5em 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+  }
+</style>
