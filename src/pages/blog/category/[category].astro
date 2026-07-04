@@ -101,9 +101,16 @@ const label = CATEGORY_LABELS[category] ?? category;
   }
 
   .post-item {
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
+    background: var(--bg-card);
+    border: none;
+    border-radius: 18px;
     overflow: hidden;
+    box-shadow: var(--shadow-xs);
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .post-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
   }
 
   .post-link {
@@ -114,7 +121,7 @@ const label = CATEGORY_LABELS[category] ?? category;
   }
 
   .post-link:hover {
-    background: #F9FAFB;
+    background: var(--bg-card);
   }
 
   .post-title {

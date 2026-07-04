@@ -6,6 +6,12 @@ import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'japan-stock': '日本株',
+  'us-stock': '米国株',
+  'household': '家計',
+};
+
 const posts = (await getCollection('blog')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
@@ -18,92 +24,117 @@ const posts = (await getCollection('blog')).sort(
   </head>
   <body>
     <Header />
-    <main>
-      <div class="page-header">
-        <h1 class="page-title">記事一覧</h1>
-        <p class="page-count">{posts.length}件の記事</p>
+    <main class="listing">
+      <div class="listing-head">
+        <h1 class="listing-headline">
+          <span class="hl-dark">記事一覧。</span>
+          <span class="hl-gray">全{posts.length}本の、リアルな記録。</span>
+        </h1>
       </div>
 
-      <ul class="post-list">
+      <div class="grid">
         {posts.map((post) => (
-          <li class="post-card">
-            <a href={`/blog/${post.id}/`} class="post-link">
-              <div class="post-body">
-                <h2 class="post-title">{post.data.title}</h2>
-                {post.data.description && (
-                  <p class="post-desc">{post.data.description}</p>
-                )}
-                <time class="post-date">
-                  <FormattedDate date={post.data.pubDate} />
-                </time>
-              </div>
-            </a>
-          </li>
+          <a href={`/blog/${post.id}/`} class="card">
+            <div class="card-top">
+              {post.data.category && (
+                <p class={`card-kicker kicker-${post.data.category}`}>
+                  {CATEGORY_LABELS[post.data.category]}
+                </p>
+              )}
+              <h2 class="card-title">{post.data.title}</h2>
+              {post.data.description && (
+                <p class="card-desc">{post.data.description}</p>
+              )}
+            </div>
+            <time class="card-date"><FormattedDate date={post.data.pubDate} /></time>
+          </a>
         ))}
-      </ul>
+      </div>
     </main>
     <Footer />
   </body>
 </html>
 
 <style>
-  .page-header {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    padding: 1.5em 0 1em;
-    border-bottom: 2px solid var(--border);
-    margin-bottom: 0;
+  main.listing {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 3em 2em 5em;
   }
-  .page-title {
-    font-size: 1.35em;
+
+  .hl-dark { color: var(--text); }
+  .hl-gray { color: var(--text-muted); }
+
+  .listing-head { padding: 1em 0 1.75em; }
+  .listing-headline {
+    font-size: 2em;
     font-weight: 700;
-    margin: 0;
-  }
-  .page-count {
-    font-size: 0.8em;
-    color: var(--text-muted);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
     margin: 0;
   }
 
-  .post-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25em;
   }
-  .post-card {
-    border-bottom: 1px solid var(--border-light);
-  }
-  .post-link {
-    display: block;
-    padding: 1.4em 0;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 1.75em 1.75em 1.5em;
+    min-height: 220px;
     text-decoration: none;
-    color: inherit;
-    transition: opacity 0.15s;
+    box-shadow: var(--shadow-xs);
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
   }
-  .post-link:hover {
-    opacity: 0.72;
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
     text-decoration: none;
   }
-  .post-title {
-    font-size: 1.1em;
+  .card-kicker {
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.6em;
+    text-transform: uppercase;
+  }
+  .kicker-japan-stock { color: #BF4800; }
+  .kicker-us-stock { color: #0071E3; }
+  .kicker-household { color: #059669; }
+  .card-title {
+    font-size: 1.05em;
     font-weight: 700;
-    margin: 0 0 0.35em;
     color: var(--text);
     line-height: 1.5;
-  }
-  .post-desc {
-    font-size: 0.875em;
-    color: var(--text-muted);
+    letter-spacing: -0.01em;
     margin: 0 0 0.5em;
-    line-height: 1.75;
+  }
+  .card-desc {
+    font-size: 0.82em;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-  .post-date {
-    font-size: 0.8em;
+  .card-date {
+    padding-top: 1em;
+    font-size: 0.75em;
     color: var(--text-light);
+  }
+
+  @media (max-width: 720px) {
+    main.listing { padding: 1.5em 1.25em 3em; }
+    .listing-headline { font-size: 1.4em; }
+    .grid { grid-template-columns: 1fr; }
   }
 </style>

@@ -13,8 +13,8 @@
   --text-muted: #6E6E73;
   --text-light: #86868B;
 
-  /* Backgrounds */
-  --bg: #FFFFFF;
+  /* Backgrounds - Apple Store gray canvas + white cards */
+  --bg: #F5F5F7;
   --bg-card: #FFFFFF;
   --bg-soft: #F5F5F7;
 

@@ -12,9 +12,11 @@ const CATEGORY_LABELS: Record<string, string> = {
   'household': '家計',
 };
 
-const posts = (await getCollection('blog'))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .slice(0, 5);
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const latest = allPosts.slice(0, 8);
+const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(0, 6);
 ---
 
 <!doctype html>
@@ -24,67 +26,96 @@ const posts = (await getCollection('blog'))
   </head>
   <body>
     <Header />
-    <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero-badge">
-          <span class="hero-badge-dot"></span>
-          お金の情報ブログ
-        </div>
-        <h1 class="hero-title">
-          配当投資と家計改善で、<br />
-          <span class="hero-title-accent">お金の自由</span>を目指す
+    <main class="store">
+      <!-- Store headline -->
+      <section class="store-head">
+        <h1 class="store-headline">
+          <span class="hl-dark">かけかぶマネーブログ。</span>
+          <span class="hl-gray">配当投資と家計改善の、リアルな記録。</span>
         </h1>
-        <p class="hero-desc">
-          総資産550万円から月20万円の配当金生活へ。<br class="pc-only" />
-          普通の会社員のリアルな投資・家計の記録を発信中。
-        </p>
-        <div class="hero-tags">
-          <a href="/blog/category/japan-stock/" class="tag tag-blue">📈 日本株</a>
-          <a href="/blog/category/us-stock/" class="tag tag-green">🌎 米国株</a>
-          <a href="/blog/category/household/" class="tag tag-orange">🏠 家計</a>
-        </div>
       </section>
 
-      <!-- 最新記事 -->
-      <section class="section">
-        <div class="section-header">
-          <h2 class="section-title">最新記事</h2>
-          <a href="/blog" class="section-more">すべて見る →</a>
-        </div>
-        <ul class="post-list">
-          {posts.map((post) => (
-            <li class="post-card">
-              <a href={`/blog/${post.id}/`} class="post-link">
-                <div class="post-meta">
-                  {post.data.category && (
-                    <span class="post-category">{CATEGORY_LABELS[post.data.category]}</span>
-                  )}
-                  <time class="post-date">
-                    <FormattedDate date={post.data.pubDate} />
-                  </time>
-                </div>
-                <h3 class="post-title">{post.data.title}</h3>
-                {post.data.description && (
-                  <p class="post-desc">{post.data.description}</p>
-                )}
-              </a>
-            </li>
+      <!-- Category chips -->
+      <nav class="chip-row" aria-label="カテゴリ">
+        <a href="/blog/" class="chip">
+          <span class="chip-icon">📚</span>
+          <span class="chip-label">すべての記事</span>
+        </a>
+        <a href="/blog/category/japan-stock/" class="chip">
+          <span class="chip-icon">📈</span>
+          <span class="chip-label">日本株</span>
+        </a>
+        <a href="/blog/category/us-stock/" class="chip">
+          <span class="chip-icon">🌎</span>
+          <span class="chip-label">米国株</span>
+        </a>
+        <a href="/blog/category/household/" class="chip">
+          <span class="chip-icon">🏠</span>
+          <span class="chip-label">家計</span>
+        </a>
+        <a href="/about/" class="chip">
+          <span class="chip-icon chip-icon-brand">か</span>
+          <span class="chip-label">このブログについて</span>
+        </a>
+      </nav>
+
+      <!-- Latest carousel -->
+      <section class="shelf">
+        <h2 class="shelf-headline">
+          <span class="hl-dark">最新記事。</span>
+          <span class="hl-gray">見逃せない、新しい発信。</span>
+        </h2>
+        <div class="carousel">
+          {latest.map((post) => (
+            <a href={`/blog/${post.id}/`} class="card">
+              {post.data.category && (
+                <p class={`card-kicker kicker-${post.data.category}`}>
+                  {CATEGORY_LABELS[post.data.category]}
+                </p>
+              )}
+              <h3 class="card-title">{post.data.title}</h3>
+              {post.data.description && (
+                <p class="card-desc">{post.data.description}</p>
+              )}
+              <time class="card-date"><FormattedDate date={post.data.pubDate} /></time>
+            </a>
           ))}
-        </ul>
+          <a href="/blog/" class="card card-more">
+            <p class="card-more-text">すべての記事を見る</p>
+            <span class="card-more-arrow">→</span>
+          </a>
+        </div>
       </section>
 
-      <!-- このブログについて -->
-      <section class="about-card">
-        <div class="about-card-icon">か</div>
-        <div class="about-card-body">
-          <h2>このブログについて</h2>
-          <p>
-            「かけかぶマネーブログ」は、<strong>日本株・米国ETF・新NISA</strong>を活用した配当投資と、
-            <strong>家計改善</strong>をテーマにしたブログです。普通の会社員が実際に試した投資戦略や、
-            月々の家計見直しのリアルを発信しています。
+      <!-- Japan stock carousel -->
+      <section class="shelf">
+        <h2 class="shelf-headline">
+          <span class="hl-dark">日本高配当株。</span>
+          <span class="hl-gray">150銘柄を保有する私の、銘柄の選び方。</span>
+        </h2>
+        <div class="carousel">
+          {popular.map((post) => (
+            <a href={`/blog/${post.id}/`} class="card">
+              <p class="card-kicker kicker-japan-stock">日本株</p>
+              <h3 class="card-title">{post.data.title}</h3>
+              {post.data.description && (
+                <p class="card-desc">{post.data.description}</p>
+              )}
+              <time class="card-date"><FormattedDate date={post.data.pubDate} /></time>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <!-- About banner -->
+      <section class="about-banner">
+        <div class="about-banner-icon">か</div>
+        <div class="about-banner-body">
+          <h2 class="about-banner-title">普通の会社員の、リアルな配当投資。</h2>
+          <p class="about-banner-desc">
+            投資歴10年。日本高配当株150銘柄と米国ETFで、月20万円の配当金生活を目指しています。
           </p>
-          <a href="/about" class="btn">詳しく読む →</a>
+          <a href="/about" class="btn-pill">詳しく読む</a>
         </div>
       </section>
     </main>
@@ -93,229 +124,241 @@ const posts = (await getCollection('blog'))
 </html>
 
 <style>
-  /* Hero */
-  .hero {
-    text-align: center;
-    padding: 4em 1em 3.5em;
-    margin-bottom: 3em;
+  main.store {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3em 0 5em;
   }
-  .hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    font-size: 0.75em;
-    font-weight: 700;
-    color: var(--accent);
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 99px;
-    padding: 0.4em 1em;
-    margin-bottom: 1.5em;
-    letter-spacing: 0.04em;
-    box-shadow: var(--shadow-xs);
-  }
-  .hero-badge-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.15);
-  }
-  .hero-title {
-    font-size: 2.6em;
-    line-height: 1.25;
-    margin: 0 0 0.6em;
-    color: var(--text);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-  }
-  .hero-title-accent {
-    background: linear-gradient(135deg, #0071E3 0%, #2997FF 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .hero-desc {
-    font-size: 0.95em;
-    color: var(--text-muted);
-    margin: 0 0 1.75em;
-    line-height: 1.85;
-  }
-  .hero-tags {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.5em;
-  }
-  .tag {
-    display: inline-block;
-    font-size: 0.85em;
-    font-weight: 500;
-    padding: 0.5em 1.2em;
-    border-radius: var(--radius-pill);
-    text-decoration: none;
-    transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
-  }
-  .tag:hover {
-    transform: scale(1.04);
-    box-shadow: var(--shadow);
-    text-decoration: none;
-  }
-  .tag-blue   { background: #EFF6FF; color: #1E40AF; }
-  .tag-green  { background: #ECFDF5; color: #059669; }
-  .tag-orange { background: #FFF7ED; color: #C2410C; }
 
-  /* Section */
-  .section { margin-bottom: 3.5em; }
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 1.25em;
-    padding-bottom: 0.75em;
-    border-bottom: 2px solid var(--border);
-  }
-  .section-title {
-    font-size: 1em;
-    font-weight: 700;
-    color: var(--text);
-    letter-spacing: 0.05em;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  .section-more {
-    font-size: 0.8em;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-  .section-more:hover { color: var(--accent); }
+  /* Two-tone headlines (Apple Store style) */
+  .hl-dark { color: var(--text); }
+  .hl-gray { color: var(--text-muted); }
 
-  /* Post list */
-  .post-list {
-    list-style: none;
+  .store-head {
+    padding: 1.5em max(2em, calc((100% - 1040px) / 2)) 1em;
+  }
+  .store-headline {
+    font-size: 2.2em;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
     margin: 0;
-    padding: 0;
+    max-width: 21em;
+  }
+
+  /* Category chips */
+  .chip-row {
+    display: flex;
+    gap: 1.25em;
+    overflow-x: auto;
+    padding: 1em max(2em, calc((100% - 1040px) / 2)) 1.5em;
+    scrollbar-width: none;
+  }
+  .chip-row::-webkit-scrollbar { display: none; }
+  .chip {
     display: flex;
     flex-direction: column;
-    gap: 0;
-  }
-  .post-card {
-    border-bottom: 1px solid var(--border-light);
-  }
-  .post-card:last-child { border-bottom: none; }
-  .post-link {
-    display: block;
-    padding: 1.4em 0.5em;
+    align-items: center;
+    gap: 0.6em;
     text-decoration: none;
-    color: inherit;
-    border-radius: var(--radius-sm);
-    transition: background 0.15s var(--ease);
+    flex-shrink: 0;
+    transition: transform 0.2s var(--ease);
   }
-  .post-link:hover {
-    background: var(--bg-soft);
-    text-decoration: none;
-  }
-  .post-meta {
+  .chip:hover { transform: scale(1.04); text-decoration: none; }
+  .chip-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
     display: flex;
     align-items: center;
-    gap: 0.75em;
-    margin-bottom: 0.5em;
+    justify-content: center;
+    font-size: 1.7em;
   }
-  .post-category {
-    display: inline-block;
-    font-size: 0.7em;
+  .chip-icon-brand {
+    background: linear-gradient(135deg, #0071E3 0%, #2997FF 100%);
+    color: #fff;
+    font-size: 1.3em;
     font-weight: 700;
-    color: var(--accent);
-    background: var(--accent-bg);
-    border-radius: 4px;
-    padding: 0.2em 0.65em;
-    letter-spacing: 0.04em;
   }
-  .post-date {
-    font-size: 0.78em;
-    color: var(--text-light);
+  .chip-label {
+    font-size: 0.8em;
     font-weight: 500;
-  }
-  .post-title {
-    font-size: 1.08em;
-    font-weight: 700;
-    margin: 0 0 0.35em;
     color: var(--text);
-    line-height: 1.5;
-    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
-  .post-desc {
-    font-size: 0.875em;
-    color: var(--text-muted);
-    margin: 0;
-    line-height: 1.6;
+
+  /* Shelf (carousel section) */
+  .shelf {
+    margin-top: 2.5em;
+  }
+  .shelf-headline {
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.9em;
+    padding: 0 max(2em, calc((100% - 1040px) / 2));
+  }
+
+  .carousel {
+    display: flex;
+    gap: 1.25em;
+    overflow-x: auto;
+    padding: 0.5em max(2em, calc((100% - 1040px) / 2)) 1.5em;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar { display: none; }
+
+  /* Cards */
+  .card {
+    flex: 0 0 320px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border-radius: 18px;
+    padding: 1.75em 1.75em 1.5em;
+    min-height: 240px;
+    text-decoration: none;
+    box-shadow: var(--shadow-xs);
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+  }
+  .card-kicker {
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    margin: 0 0 0.6em;
+    text-transform: uppercase;
+  }
+  .kicker-japan-stock { color: #BF4800; }
+  .kicker-us-stock { color: #0071E3; }
+  .kicker-household { color: #059669; }
+  .card-title {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.45;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5em;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
-  /* About card */
-  .about-card {
-    display: flex;
-    gap: 1.5em;
-    background: var(--bg-soft);
-    border: none;
-    border-radius: var(--radius-lg);
-    padding: 2.25em 2.5em;
-    margin-bottom: 2em;
+  .card-desc {
+    font-size: 0.82em;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
-  .about-card-icon {
+  .card-date {
+    margin-top: auto;
+    padding-top: 1em;
+    font-size: 0.75em;
+    color: var(--text-light);
+  }
+
+  .card-more {
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    background: transparent;
+    border: 2px dashed var(--border);
+    box-shadow: none;
+  }
+  .card-more:hover {
+    border-color: var(--accent);
+    box-shadow: none;
+  }
+  .card-more-text {
+    font-size: 0.95em;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0;
+  }
+  .card-more-arrow {
+    font-size: 1.4em;
+    color: var(--accent);
+  }
+
+  /* About banner */
+  .about-banner {
+    margin: 3em max(2em, calc((100% - 1040px) / 2)) 0;
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 3em 2.5em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    box-shadow: var(--shadow-xs);
+  }
+  .about-banner-icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, #0071E3 0%, #2997FF 100%);
+    color: #fff;
+    font-size: 2em;
+    font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    box-shadow: 0 8px 24px rgba(0, 113, 227, 0.3);
+  }
+  .about-banner-title {
     font-size: 1.4em;
     font-weight: 700;
-    box-shadow: 0 4px 14px rgba(0, 113, 227, 0.30);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.4em;
   }
-  .about-card-body { flex: 1; min-width: 0; }
-  .about-card h2 {
-    font-size: 1.05em;
-    margin: 0 0 0.6em;
-    color: var(--text);
-  }
-  .about-card p {
-    font-size: 0.875em;
+  .about-banner-desc {
+    font-size: 0.9em;
     color: var(--text-muted);
-    margin-bottom: 1.1em;
-    line-height: 1.85;
+    line-height: 1.8;
+    margin: 0 0 1.2em;
   }
-  .btn {
+  .btn-pill {
     display: inline-block;
-    padding: 0.6em 1.5em;
     background: var(--accent);
     color: #fff;
-    border-radius: var(--radius-pill);
     font-size: 0.9em;
     font-weight: 500;
+    padding: 0.6em 1.6em;
+    border-radius: var(--radius-pill);
     text-decoration: none;
     transition: background 0.2s var(--ease), transform 0.2s var(--ease);
   }
-  .btn:hover {
+  .btn-pill:hover {
     background: var(--accent-hover);
     transform: scale(1.03);
     text-decoration: none;
   }
 
-  .pc-only { display: none; }
-  @media (min-width: 640px) { .pc-only { display: inline; } }
-
-  @media (max-width: 600px) {
-    .hero { padding: 2.5em 1em 2em; }
-    .hero-title { font-size: 1.55em; }
-    .about-card { flex-direction: column; padding: 1.5em 1.5em; gap: 1em; }
-    .about-card-icon { width: 48px; height: 48px; font-size: 1.2em; }
+  @media (max-width: 720px) {
+    main.store { padding: 1.5em 0 3em; }
+    .store-headline { font-size: 1.5em; }
+    .shelf-headline { font-size: 1.2em; }
+    .card { flex: 0 0 260px; padding: 1.4em 1.4em 1.2em; min-height: 210px; }
+    .chip-icon { width: 54px; height: 54px; font-size: 1.4em; }
+    .about-banner {
+      flex-direction: column;
+      text-align: center;
+      padding: 2em 1.5em;
+      gap: 1.25em;
+    }
   }
 </style>
