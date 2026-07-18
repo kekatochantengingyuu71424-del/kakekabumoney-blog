@@ -1,11 +1,12 @@
 ---
-title: 'SCHD vs VYM 徹底比較｜両方持つ私が語る、2強の違いと併用の意味'
-description: '米国高配当ETFの2強、SCHDとVYM。増配率・セクター構成・買い方の違いを深掘りし、「どちらを選ぶか」ではなく「なぜ私は両方持つのか」を解説。日本からの購入手段の違い（SCHDは楽天SCHD経由のみ）にも触れます。'
-pubDate: '2026-07-18'
-category: 'us-stock'
+title: SCHD vs VYM 徹底比較｜両方持つ私が語る、2強の違いと併用の意味
+description: 米国高配当ETFの2強、SCHDとVYM。増配率・セクター構成・買い方の違いを深掘りし、「どちらを選ぶか」ではなく「なぜ私は両方持つのか」を解説。日本からの購入手段の違い（SCHDは楽天SCHD経由のみ）にも触れます。
+pubDate: 2026-07-18
+category: us-stock
 ---
-
 ## 高配当ETFの2強、SCHDとVYM
+
+![](</images/ChatGPT Image 2026年7月18日 17_11_01.png>)
 
 米国高配当ETFの人気を二分するのが、**SCHD**と**VYM**です。
 
@@ -15,8 +16,9 @@ category: 'us-stock'
 
 ## 基本スペック比較
 
+
 | 項目 | SCHD | VYM |
-|------|------|------|
+| ------------- | ------------------- | ------------- |
 | 運用会社 | シュワブ | バンガード |
 | 銘柄数 | 約100 | 約400〜500 |
 | 選定基準 | 財務の質＋配当の継続性で厳選 | 高配当銘柄を幅広く網羅 |
@@ -24,6 +26,7 @@ category: 'us-stock'
 | 増配率（10年平均の目安） | **年10%超** | 年6〜7% |
 | 経費率 | 0.06% | 0.06% |
 | 日本からの買い方 | **投資信託（楽天SCHD等）のみ** | ETF直接＋投資信託の両方 |
+
 
 コストは互角。差がつくのは「**中身の思想**」と「**増配力**」、そして「**買い方**」です。
 
@@ -136,10 +139,8 @@ VYMの**400〜500銘柄という圧倒的な広さ**は、その保険になり�
 
 ## 楽天証券で楽天SCHD・VYMを買う
 
-<div class="affiliate-cta">
-  <div class="affiliate-cta-body">
-    <p class="affiliate-cta-title">楽天証券で高配当ETF投資を始める</p>
-    <p class="affiliate-cta-desc">楽天SCHDは100円から積立可能、VYMはETF・投信の両方に対応。新NISA成長投資枠なら分配金も非課税。</p>
-  </div>
-  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
-</div>
+楽天証券で高配当ETF投資を始める
+
+楽天SCHDは100円から積立可能、VYMはETF・投信の両方に対応。新NISA成長投資枠なら分配金も非課税。
+
+[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
