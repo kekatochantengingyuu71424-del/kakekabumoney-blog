@@ -6,7 +6,7 @@ category: japan-stock
 ---
 ## 楽天証券とSBI証券、どっちで口座を開けばいいのか
 
-![](</images/ChatGPT Image 2026年5月3日 22_13_54.png>)
+![楽天証券とSBI証券を比較するイメージ](</images/ChatGPT Image 2026年5月3日 22_13_54.png>)
 
 新NISAをきっかけに「これから投資を始めよう」と思っている人が、まずぶつかる壁がこれです。
 
@@ -161,14 +161,18 @@ SBI証券は **Vポイント・Pontaポイント・JALマイル・dポイント*
 
 ## 口座開設はこちら
 
-楽天証券で口座開設する
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で口座開設する</p>
+    <p class="affiliate-cta-desc">楽天経済圏ユーザーなら一択。楽天SCHD・楽天オルカンが買えてポイントも貯まる。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>
 
-楽天経済圏ユーザーなら一択。楽天SCHD・楽天オルカンが買えてポイントも貯まる。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
-
-SBI証券で口座開設する
-
-三井住友カードユーザーは最大3.0%還元。IPO実績も業界トップクラス。
-
-[SBI証券を見る →](https://www.sbisec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">SBI証券で口座開設する</p>
+    <p class="affiliate-cta-desc">三井住友カードユーザーは最大3.0%還元。IPO実績も業界トップクラス。</p>
+  </div>
+  <a href="https://www.sbisec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">SBI証券を見る →</a>
+</div>

@@ -20,7 +20,7 @@ category: japan-stock
 
 この記事では、3社の比較と、私が海運株とどう付き合っているかを書いていきます。
 
-![](</images/ChatGPT Image 2026年5月16日 07_21_43.png>)
+![海運3社（日本郵船・商船三井・川崎汽船）を比較するイメージ](</images/ChatGPT Image 2026年5月16日 07_21_43.png>)
 
 ## 海運3社の基本情報
 
@@ -179,8 +179,10 @@ NTTや三菱商事などの安定銘柄をメインに、**海運はトッピン
 
 ## 楽天証券で1株から海運株を買う
 
-楽天証券で1株から海運株を買う
-
-単元未満株「かぶミニ」で1株から購入可能。気になる海運株をスパイスとして組み込める。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で1株から海運株を買う</p>
+    <p class="affiliate-cta-desc">単元未満株「かぶミニ」で1株から購入可能。気になる海運株をスパイスとして組み込める。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

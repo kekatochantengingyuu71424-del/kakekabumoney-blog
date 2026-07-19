@@ -20,7 +20,7 @@ category: japan-stock
 
 私自身、個別のJ-REITは選びきれず、**NF・東証REIT指数連動型上場投信**（1343）を保有しています。これがJ-REIT入門としては、最もシンプルで合理的な選択肢だと感じています。
 
-![](</images/ChatGPT Image 2026年5月16日 06_59_23.png>)
+![J-REIT（不動産投資信託）の選び方のイメージ](</images/ChatGPT Image 2026年5月16日 06_59_23.png>)
 
 ## J-REITとは何か（30秒で理解）
 
@@ -185,8 +185,10 @@ J-REITは、長期で持つ高配当ポートフォリオに **不動産の要�
 
 ## 楽天証券でJ-REITを買う
 
-楽天証券で1343やJ-REITを買う
-
-2,000円前後で1343が買える。新NISA成長投資枠なら分配金が非課税。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で1343やJ-REITを買う</p>
+    <p class="affiliate-cta-desc">2,000円前後で1343が買える。新NISA成長投資枠なら分配金が非課税。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

@@ -18,7 +18,7 @@ category: us-stock
 
 この記事では、両ETFの特徴と、保有しながら気づいた**注意点・落とし穴**を、リアルな視点で書いていきます。
 
-![](</images/ChatGPT Image 2026年5月9日 21_30_37.png>)
+![JEPIとJEPQのカバードコールETFを比較するイメージ](</images/ChatGPT Image 2026年5月9日 21_30_37.png>)
 
 ## JEPIとJEPQの基本情報
 
@@ -151,8 +151,10 @@ JEPI/JEPQは「高利回りで毎月配当」という強烈な魅力があり�
 
 ## 楽天証券で米国ETFを買う
 
-楽天証券で米国ETFを買う
-
-JEPI・JEPQ・SCHDなど主要な米国ETFを取り扱い。新NISA成長投資枠なら配当が非課税。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で米国ETFを買う</p>
+    <p class="affiliate-cta-desc">JEPI・JEPQ・SCHDなど主要な米国ETFを取り扱い。新NISA成長投資枠なら配当が非課税。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>
