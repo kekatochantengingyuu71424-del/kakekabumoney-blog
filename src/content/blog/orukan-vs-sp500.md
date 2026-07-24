@@ -6,7 +6,7 @@ category: us-stock
 ---
 ## オルカンかS&P500か、投資家の永遠のテーマ
 
-![](</images/ChatGPT Image 2026年7月18日 17_17_06.png>)
+![オルカンとS&P500を比較するイメージ](</images/ChatGPT Image 2026年7月18日 17_17_06.png>)
 
 新NISAのつみたて投資枠で何を買うか。多くの人が最後まで悩むのが、この2択です。
 
@@ -127,8 +127,10 @@ category: us-stock
 
 ## 楽天証券でオルカン・S&P500を積み立てる
 
-楽天証券でつみたてを始める
-
-オルカンもS&P500も100円から積立可能。楽天カード積立でポイントも貯まる。新NISAつみたて枠対応。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券でつみたてを始める</p>
+    <p class="affiliate-cta-desc">オルカンもS&P500も100円から積立可能。楽天カード積立でポイントも貯まる。新NISAつみたて枠対応。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

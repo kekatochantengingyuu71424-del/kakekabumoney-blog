@@ -6,7 +6,7 @@ category: us-stock
 ---
 ## 高配当ETFの2強、SCHDとVYM
 
-![](</images/ChatGPT Image 2026年7月18日 17_11_01.png>)
+![SCHDとVYMを比較するイメージ](</images/ChatGPT Image 2026年7月18日 17_11_01.png>)
 
 米国高配当ETFの人気を二分するのが、**SCHD**と**VYM**です。
 
@@ -139,8 +139,10 @@ VYMの**400〜500銘柄という圧倒的な広さ**は、その保険になり�
 
 ## 楽天証券で楽天SCHD・VYMを買う
 
-楽天証券で高配当ETF投資を始める
-
-楽天SCHDは100円から積立可能、VYMはETF・投信の両方に対応。新NISA成長投資枠なら分配金も非課税。
-
-[楽天証券を見る →](https://www.rakuten-sec.co.jp/)
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で高配当ETF投資を始める</p>
+    <p class="affiliate-cta-desc">楽天SCHDは100円から積立可能、VYMはETF・投信の両方に対応。新NISA成長投資枠なら分配金も非課税。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>
