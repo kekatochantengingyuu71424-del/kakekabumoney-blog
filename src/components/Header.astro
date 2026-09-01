@@ -83,12 +83,20 @@ import HeaderLink from './HeaderLink.astro';
   }
 
   @media (max-width: 600px) {
-    .header-inner { height: 54px; padding: 0 1em; }
-    .logo-icon { width: 26px; height: 26px; font-size: 0.85em; }
-    .logo-text { font-size: 0.85em; }
+    .header-inner { height: 54px; padding: 0 0.9em; gap: 0.5em; }
+    .logo-icon { width: 28px; height: 28px; font-size: 0.9em; }
+    /* サイト名はバナー・タイトルに出るので、ここは丸アイコンのみ */
+    .logo-text { display: none; }
     nav :global(a) {
-      font-size: 0.78em;
-      padding: 0.4em 0.5em;
+      font-size: 0.8em;
+      padding: 0.4em 0.55em;
+    }
+  }
+
+  @media (max-width: 360px) {
+    nav :global(a) {
+      font-size: 0.74em;
+      padding: 0.4em 0.4em;
     }
   }
 </style>
