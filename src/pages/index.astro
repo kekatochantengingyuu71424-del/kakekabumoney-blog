@@ -74,8 +74,8 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
       <!-- Latest carousel -->
       <section class="shelf">
         <h2 class="shelf-headline">
-          <span class="hl-dark">最新記事。</span>
-          <span class="hl-gray">見逃せない、新しい発信。</span>
+          <span class="hl-dark">最新記事</span>
+          <span class="hl-gray">見逃せない、新しい発信</span>
         </h2>
         <div class="carousel">
           {latest.map((post) => (
@@ -102,8 +102,8 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
       <!-- Japan stock carousel -->
       <section class="shelf">
         <h2 class="shelf-headline">
-          <span class="hl-dark">日本高配当株。</span>
-          <span class="hl-gray">150銘柄を保有する私の、銘柄の選び方。</span>
+          <span class="hl-dark">日本高配当株</span>
+          <span class="hl-gray">150銘柄を保有する私の、銘柄の選び方</span>
         </h2>
         <div class="carousel">
           {popular.map((post) => (
@@ -153,6 +153,7 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
   .hero-banner img {
     display: block;
     width: 100%;
+    max-width: 820px;
     height: auto;
     border-radius: 18px;
   }
