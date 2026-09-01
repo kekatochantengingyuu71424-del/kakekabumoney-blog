@@ -27,11 +27,23 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
   <body>
     <Header />
     <main class="store">
+      <!-- Hero banner (top page only) -->
+      <section class="hero-banner">
+        <img
+          src="/images/hero-banner.webp"
+          alt="かけかぶマネーブログ — 未来のために、今できるお金のこと"
+          width="1693"
+          height="929"
+          fetchpriority="high"
+          decoding="async"
+        />
+      </section>
+
       <!-- Store headline -->
       <section class="store-head">
         <h1 class="store-headline">
-          <span class="hl-dark">かけかぶマネーブログ。</span>
-          <span class="hl-gray">配当投資と家計改善の、リアルな記録。</span>
+          <span class="hl-dark">かけかぶマネーブログ</span>
+          <span class="hl-gray">配当投資と家計改善の、リアルな記録</span>
         </h1>
       </section>
 
@@ -134,6 +146,16 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
   /* Two-tone headlines (Apple Store style) */
   .hl-dark { color: var(--text); }
   .hl-gray { color: var(--text-muted); }
+
+  .hero-banner {
+    padding: 1.25em max(2em, calc((100% - 1040px) / 2)) 0;
+  }
+  .hero-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+  }
 
   .store-head {
     padding: 1.5em max(2em, calc((100% - 1040px) / 2)) 1em;
@@ -350,6 +372,8 @@ const popular = allPosts.filter((p) => p.data.category === 'japan-stock').slice(
 
   @media (max-width: 720px) {
     main.store { padding: 1.5em 0 3em; }
+    .hero-banner { padding: 0 1em; }
+    .hero-banner img { border-radius: 12px; }
     .store-headline { font-size: 1.5em; }
     .shelf-headline { font-size: 1.2em; }
     .card { flex: 0 0 260px; padding: 1.4em 1.4em 1.2em; min-height: 210px; }
