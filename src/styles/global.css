@@ -166,6 +166,22 @@ th, td {
   border-bottom: 1px solid var(--border);
   text-align: left;
 }
+/* 数値セルが「70 %」のように途中で折り返さないように */
+th + th, td + td {
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  /* 狭い画面では1文字ずつ折り返さず、表ごと横スクロールさせる */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  th, td {
+    padding: 0.7em 0.8em;
+    white-space: nowrap;
+  }
+}
 tr:last-child td {
   border-bottom: none;
 }
@@ -217,6 +233,31 @@ strong, b {
   margin: 0.5em 0 -0.5em;
   text-align: right;
   letter-spacing: 0.02em;
+}
+
+/* ── 記事内グラフ ───────────────────────── */
+.chart {
+  margin: 2em 0;
+  padding: 1.25em 1.25em 1em;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+}
+.chart svg {
+  display: block;
+  width: 100%;
+  min-width: 460px;
+  height: auto;
+}
+.chart figcaption {
+  margin-top: 0.9em;
+  font-size: 0.8em;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+@media (max-width: 600px) {
+  .chart { padding: 1em 0.9em 0.8em; }
 }
 
 .affiliate-cta {
