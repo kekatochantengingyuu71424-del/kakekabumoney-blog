@@ -80,6 +80,8 @@ SCHDは米国の高配当株ETFのなかで、**増配ペースが圧倒的に�
 
 商社株・通信株・銀行株など、増配を続けている企業を中心に保有している。
 
+📖 商社株の比較 → [5大商社株、買うならどれ？三菱商事派が配当利回りで徹底比較](/blog/5-major-trading-companies/)
+
 個別株をNISAで持つメリットは明確だ。
 
 - 配当金が**非課税で受け取れる**（通常は約20%課税）
@@ -137,3 +139,13 @@ SCHDは米国の高配当株ETFのなかで、**増配ペースが圧倒的に�
 新NISAは「何を買うか」より「始めること」が大事だ。迷っている間にも、非課税で運用できる時間が失われていく。
 
 まず口座を開いて、つみたて枠で1本積み立てる。それだけで十分なスタートになる 🌱
+
+## 楽天証券で新NISAを始める
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券でNISA口座を開く</p>
+    <p class="affiliate-cta-desc">つみたて投資枠と成長投資枠を同じ口座で使い分けられます。楽天カードでの積立にも対応しています。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

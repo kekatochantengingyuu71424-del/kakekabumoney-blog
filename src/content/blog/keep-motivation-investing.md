@@ -29,6 +29,8 @@ category: 'japan-stock'
 
 オルカンやS&P500のようなインデックス投資は、**毎月自動で積み立てて、あとは放置**。
 
+📖 インデックスの選び方 → [オルカン vs S&P500、結局どっち？両方持つ私がオルカンを主軸にした理由](/blog/orukan-vs-sp500/)
+
 「いつ買おうかな」「今は割高かな」と考える時間を、意識的にゼロにしています。**判断を減らすことで、続けやすくなる**んです。
 
 ### ② 個別株は「一度買ったら売らない」
@@ -137,3 +139,13 @@ category: 'japan-stock'
 長期投資の正解は、「**燃え尽きずに走り続けられる仕組み**」を作ることだと思っています。
 
 派手なリターンを狙うより、地味に20年続ける。これが普通の会社員が資産を作る最強の戦略です 🌱
+
+## 楽天証券で、配当を受け取ってみる
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で高配当株を買う</p>
+    <p class="affiliate-cta-desc">モチベーションがいちばん続くのは、実際に配当が振り込まれたときです。1株でも配当は入るので、まず体験してみるのが早道です。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

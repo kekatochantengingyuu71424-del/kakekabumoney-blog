@@ -94,6 +94,8 @@ category: 'japan-stock'
 
 例：通信・商社・銀行・インフラなど
 
+📖 商社株の比較 → [5大商社株、買うならどれ？三菱商事派が配当利回りで徹底比較](/blog/5-major-trading-companies/)
+
 つまり、「**成熟した高配当株なら配当性向50〜70%でも健全**」だが、**「成長企業で配当性向が高い」のは違和感がある**、という見方ができます。
 
 ## 配当性向だけで判断してはいけない
@@ -140,3 +142,13 @@ category: 'japan-stock'
 - **累進配当政策**を掲げる企業は、配当の安定性で心強い
 
 高配当株は「利回り」だけ見ると失敗します。**配当性向をチェックして、その配当が持続可能かを確かめる**。このひと手間が、減配という落とし穴を避ける鍵になります 🌱
+
+## 楽天証券で高配当株を探す
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で口座開設する</p>
+    <p class="affiliate-cta-desc">配当性向や業績は銘柄ページで確認できます。気になった銘柄は1株から買えるので、配当を受け取りながら確かめられます。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

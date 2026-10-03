@@ -124,6 +124,11 @@ NTTもKDDIも三菱商事も、コロナ暴落のときに減配していませ�
 
 メンタルが揺れているときの極端な判断は、ほぼ間違いです。**動かない、もしくは少額だけ動く**のが正解。
 
+
+📖 売る基準について → [高配当株に売り時はあるか｜10年間ほとんど売っていない私の考え方](/blog/when-to-sell-dividend-stocks/)
+
+📖 その前提として → [生活防衛資金はいくら必要か｜投資より先に、現金を確保すべき理由](/blog/emergency-fund/)
+
 ## まとめ
 
 - 株価ではなく 「**配当**」を見る → リアルなキャッシュフローを実感
@@ -136,3 +141,13 @@ NTTもKDDIも三菱商事も、コロナ暴落のときに減配していませ�
 でも、握り切れた人だけが、その後の回復局面で大きな果実を手に入れる。私自身、過去の暴落を握り続けたことが、今の資産の土台になっています。
 
 「**暴落こそチャンス**」と頭で理解していても、実際の局面ではメンタルが揺らぎます。だからこそ、**事前にルール化しておく**ことが大切です 🌱
+
+## 楽天証券で、暴落に備える
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で口座開設する</p>
+    <p class="affiliate-cta-desc">日本株は1株から買えるので、暴落時に少しずつ買い増すこともできます。新NISAなら配当も非課税です。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

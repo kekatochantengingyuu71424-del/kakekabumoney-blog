@@ -117,6 +117,8 @@ category: 'japan-stock'
 
 📖 参考 → [投資を続けるモチベーション、私はこう保ってる](/blog/keep-motivation-investing/)
 
+📖 この先の目標 → [【資産公開】配当金生活までの道のり ─ 500万円から月20万円配当を目指す10年計画](/blog/dividend-life-roadmap/)
+
 ## ロードマップまとめ
 
 | STEP | やること | 詳細記事 |

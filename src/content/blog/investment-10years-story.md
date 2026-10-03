@@ -45,6 +45,8 @@ category: 'japan-stock'
 
 銀行の担当者には少し申し訳ない気持ちもあったが、自分の資産は自分で守るしかない。つみたてNISAでS&P500の積み立てを始めた。その後、分散を意識してオルカン（全世界株式インデックス）に切り替え、今に至る。
 
+📖 インデックスの選び方 → [オルカン vs S&P500、結局どっち？両方持つ私がオルカンを主軸にした理由](/blog/orukan-vs-sp500/)
+
 あの切り替えは、正解だったと思っている。
 
 ## インデックス投資から高配当株へ。キャッシュフローが欲しかった
@@ -98,3 +100,13 @@ category: 'japan-stock'
 - 「始める」こと自体が、最大の正解だった
 
 投資の正解は、始めた後に少しずつ見えてくる。まず1歩踏み出すことが、すべての始まりだ 🌱
+
+## 楽天証券で、小さく始める
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で口座開設する</p>
+    <p class="affiliate-cta-desc">10年前の私が知りたかったのは「まず少額で始める」ことでした。今は1株数百円から買えるので、当時よりずっと小さく始められます。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

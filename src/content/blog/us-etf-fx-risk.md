@@ -17,6 +17,8 @@ category: 'us-stock'
 
 私は実際に **VYM・SPYD・HDV** を保有していますが、過去10年の為替推移を振り返ると、**為替リスクは**「思っていたほど怖くない」というのが正直な感想です。
 
+📖 SPYDの注意点 → [SPYD徹底解説｜高利回りの魅力と、単独保有が危険な理由](/blog/spyd-guide/)
+
 この記事では、為替リスクの仕組みと、過去10年のデータで「本当のところ」を検証していきます。
 
 ## 為替リスクって、そもそも何？
@@ -138,3 +140,13 @@ category: 'us-stock'
 「為替リスクが怖い」という理由で米国ETFを敬遠していると、**世界トップクラスの優良企業に投資する機会を逃します**。
 
 リスクをゼロにはできませんが、**理解して付き合うことはできる**。長期投資の前提で考えれば、為替リスクは「想定の範囲内」で済む話だと、保有してきた経験から実感しています 🌱
+
+## 楽天証券で米国ETFを買う
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で米国ETFを買う</p>
+    <p class="affiliate-cta-desc">主要な米国ETFは買付手数料が無料です。円貨決済と外貨決済を選べるので、為替との付き合い方も調整できます。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

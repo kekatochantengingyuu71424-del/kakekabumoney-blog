@@ -63,6 +63,8 @@ category: 'japan-stock'
 
 通信・金融・商社・インフラなど、異なる業種の銘柄を持つことで、特定の業種の不況に引きずられるリスクを下げます。
 
+📖 商社株の比較 → [5大商社株、買うならどれ？三菱商事派が配当利回りで徹底比較](/blog/5-major-trading-companies/)
+
 「同じ通信株を3銘柄持っている」のは、分散しているようで実はリスクが集中しています。
 
 ## 初心者が最初に買うなら、私はNTTを選ぶ
@@ -109,3 +111,13 @@ NTTを推しましたが、「NTTだけ買えばOK」と言いたいわけでは
 最初の1株を買う。これが一番難しくて、一番大事なステップです。
 
 「何を買えばいいかわからない」で止まっている人が、一歩踏み出すきっかけになれば嬉しいです。
+
+## 楽天証券で最初の1銘柄を買う
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で1株から買う</p>
+    <p class="affiliate-cta-desc">選び方が決まったら、あとは実際に買ってみる番です。1株から買えるので、数百円で株主になって観察を始められます。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>

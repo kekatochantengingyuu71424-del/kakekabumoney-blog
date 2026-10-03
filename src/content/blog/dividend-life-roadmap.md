@@ -52,12 +52,16 @@ category: 'japan-stock'
 
 メインの配当源です。商社株・通信株・銀行株など、増配を続けている企業を中心に保有しています。
 
+📖 商社株の比較 → [5大商社株、買うならどれ？三菱商事派が配当利回りで徹底比較](/blog/5-major-trading-companies/)
+
 - **狙い**：安定したインカム＋ゆるやかな増配
 - **注意点**：減配リスクを避けるため、業種を分散
 
 ### ② 米国ETF（VYM・SCHD）
 
 ドル建ての配当を持つことで、為替リスクの分散にもなります。
+
+📖 為替について → [米国ETFの為替リスク、本当に怖い？10年のドル円推移で検証](/blog/us-etf-fx-risk/)
 
 - **VYM**：高配当株を広く分散したETF
 - **SCHD**：増配ペースが速く、長期保有に向く
@@ -121,3 +125,13 @@ category: 'japan-stock'
 「同じように配当金生活を目指している」「これから投資を始めたい」という方は、ぜひ一緒に歩んでいきましょう。
 
 ブックマークしていただけると、励みになります 🌱
+
+## 楽天証券で配当への一歩を踏み出す
+
+<div class="affiliate-cta">
+  <div class="affiliate-cta-body">
+    <p class="affiliate-cta-title">楽天証券で高配当株を買う</p>
+    <p class="affiliate-cta-desc">日本株は1株から、米国ETFも買付手数料無料。新NISAなら配当が非課税なので、受け取った額がそのまま手取りになります。</p>
+  </div>
+  <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener noreferrer sponsored" class="affiliate-cta-btn">楽天証券を見る →</a>
+</div>
