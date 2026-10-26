@@ -176,6 +176,8 @@ category: 'japan-stock'
 
 📖 始め方 → [高配当株投資の始め方 完全ロードマップ](/blog/dividend-investing-roadmap/)
 
+📖 セクター別の分析 → [【保有分析】183銘柄をセクター別に数えたら、分散しているつもりで偏っていた](/blog/sector-balance/)
+
 ## まとめ
 
 - 日本の高配当株を**180銘柄以上**保有している
