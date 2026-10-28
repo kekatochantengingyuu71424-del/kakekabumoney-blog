@@ -219,6 +219,8 @@ category: 'japan-stock'
 📖 配当6位の銘柄 → [ニホンフラッシュは配当6位だが含み損が最大｜中国事業という弱点](/blog/nihon-flush-dividend/)
 📖 配当9位の銘柄 → [プレステージ・インターナショナルは5期連続増配｜地味なBPOという事業](/blog/prestige-international-dividend/)
 
+📖 配当4位の銘柄 → [野村不動産ホールディングスは逆風の中で買った｜配当性向41%と13期連続増配](/blog/nomura-real-estate-dividend/)
+
 ## まとめ
 
 - 日本株183銘柄が生む配当の構成比を試算（**金額は非公開、実績ではなく試算**）
